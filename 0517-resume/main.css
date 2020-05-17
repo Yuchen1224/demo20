@@ -1,0 +1,256 @@
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    background-image: radial-gradient(circle at top right, rgba(121, 68, 154, 0.13), transparent),
+      radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.13), transparent);
+    overflow: hidden ;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 导航样式 */
+.main-menu{
+    overflow: hidden ;
+    /* height: 90px;  */
+    position: fixed;
+    margin-top: 5px;
+}
+.main-menu ul{
+    list-style: none;
+}
+.main-menu li{
+    width: 22%;
+    position: relative;
+    float: left;
+}
+.main-menu a{
+    color: #cce7f8;
+    font-size: 0.8rem;
+    font-family: 'Pacifico', cursive;
+    text-transform: uppercase;
+    text-decoration:none;
+    justify-content: center;
+    align-items: center;
+}
+.main-menu a:hover{
+    color:#95a5a6;
+}
+.neon{
+    color: #cce7f8;
+    font-size: 2.5rem;
+    font-family: 'Pacifico', cursive;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: shining 0.0000005s alternate infinite;
+    -ms-animation: shining 0.0000005s alternate infinite;
+}
+@keyframes shining {
+from {
+  text-shadow: 0 0 6px  rgba(182, 211, 207, 0.9),
+    0 0 30px rgba(182, 211, 207, 0.3), 0 0 12px rgba(182, 211, 207, 0.9),
+    0 0 21px rgb(127, 153, 149), 0 0 34px rgba(136, 160, 185, 0.8),
+    0 0 54px rgba(89, 138, 190, 0.9);
+}
+to {
+  text-shadow: 0 0 6px  rgba(182, 211, 207, 1),
+    0 0 30px rgba(182, 211, 207, 0.4), 0 0 12px rgba(182, 211, 207, 1),
+    0 0 22px rgb(127, 153, 150), 0 0 38px rgba(136, 160, 185, 0.9),
+    0 0 60px rgba(89, 138, 190, 1);
+}
+}
+canvas{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+.foot{
+    color: #4d4b4b;   
+    text-align: center;
+}
+.foot p{
+    margin: 465px 0px 465px 0px;
+}
+
+/* 关于样式*/
+.about{
+    position: absolute;
+}
+.about-content{
+    height: 520px;
+}
+.about-content .introll{
+    width: 100%;
+    margin-left: 300px;
+    height: 150px;
+}
+.about-content .introll .left-icon{
+    display: inline-block;
+    margin-top: 80px;
+}
+.about-content .introll .right-icon{
+    font-size: 2.8rem;
+    color: #cce7f8;
+    margin-left: 150px;
+    align-items: center;
+    justify-content: center;
+}
+.about-content img{
+    border-radius: 50%;
+    height: 125px;
+    width: 125px;
+}
+
+/* 技能样式 */
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.skill{
+    height: 570px;
+}
+.skill-left{
+    color: rgba(182, 211, 207, 1);
+    /* animation-delay: 1s; */
+    margin-top: 85px;
+    margin-left: 130px;
+}
+.path{
+    position: relative;
+    margin: 0.3em;
+    font-size: 2.1em;
+    font-family: "Baloo Bhaijaan", cursive;
+    color: rgba(182, 211, 207, 1);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 50%, rgba(0,0,0,1) 100%);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text ;
+    animation: go 6s linear infinite;    
+    -webkit-animation:go 6s linear infinite; 
+    -moz-animation:go 6s linear infinite; 
+}
+ @keyframes go {
+    from {
+        background-position: -400%;
+        transform: scale(2);
+    }
+    to {
+        background-position: 400%;
+        /* transform: scale(2); */
+    }
+}
+.skill-right{
+    font-size: 1.3em;
+    color: rgba(182, 211, 207, 1);
+    margin-left: 400px;
+    position: absolute;
+    margin-top: 75px;
+    animation: bounce 3s ease infinite alternate;
+    -webkit-animation: bounce 3s ease infinite alternate ;
+}
+@keyframes bounce {
+    to {
+        transform: translateY(40px);
+    }
+}
+
+/* 作品样式 */
+.works{
+    width: 1100px;
+    height: 770px;
+    /* justify-content: space-between; */
+    display: flex;
+    margin-left: 100px;
+    /* margin-top: 250px; */
+}
+.works .works-list{
+    margin:0.5em;
+    margin-top: 250px;
+}
+.works .works-list .list-img-top{
+    position: relative;
+    z-index: 2;
+    width: 355px;
+    height: 210px;
+    /* transform: translateY(52%); */
+    transition: 0.2s;
+}
+.works .works-list .list-body{
+    z-index: 1;
+    box-sizing: border-box;
+    padding: 0.8em;
+    height: 210px;
+    background: #f1f8f8;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.056),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.081), 0 12.5px 10px rgba(0, 0, 0, 0.1),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.119),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.144), 0 100px 80px rgba(0, 0, 0, 0.2);
+    transform: translateY(-80%);
+    transition: 1s;
+}
+.list-text{
+    margin: 1em  1em ;
+}
+.list-title{
+    margin: .75em 0 0.75em 0;
+    font-size: 1.1em;
+    font-weight: bold;
+    line-height: 1.2;
+}
+.btn{
+    padding: .5em .5em;
+    color: black;
+    text-decoration: none;
+    line-height: 1.5;
+    border: 1px solid #f1f8f8;
+    border-radius: 0.5em;
+    transition: 1s;
+    position:absolute;
+    bottom:1%;
+}
+.btn:hover{ 
+    color: white;
+    background: rgb(43, 155, 219);
+}
+.list-img-top:hover  { 
+    transform:translateY(-70%);
+    transition: 1s;
+}
+
+/* 联系样式 */
+.contact-text{
+    color: #797474;
+    text-align: center;
+    font-size: 1.3em;
+}
+.contact-way{
+    list-style: none;
+    text-align: center;
+}
+.contact-way li{
+    position: relative;
+    float: left;
+    margin: 4.5em 4.5em;
+}
+.contact-way img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;   
+}
+.contact-way li a{
+    color: white;
+    text-decoration: none;
+}
+.contact-way li a:hover{
+    color: teal;
+}
+.contact-way li p{
+    color: white;
+}
