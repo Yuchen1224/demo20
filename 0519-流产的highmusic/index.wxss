@@ -1,0 +1,27 @@
+page{
+  color: #666;
+}
+
+/*音乐平台列表*/
+.nav_music{
+  padding: 5rpx 5rpx;
+}
+.music_item .music_img{
+  padding: 25rpx 20rpx;
+  width: 350rpx;
+  height: 350rpx;
+  position: relative;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+/* 畅所欲言 */
+.comment_item{
+  padding: 5rpx 3rpx 5rpx 10rpx;
+  width: 700rpx;
+  height: 400rpx;
+  position: relative;
+  display: block;
+  background-color: rgb(245, 236, 236);
+  border-radius: 10%;
+}
